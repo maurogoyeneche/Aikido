@@ -9,9 +9,9 @@ module.exports = (sequelize, Model, DataTypes) => {
       content: {
         type: DataTypes.TEXT,
       },
-      likes: {
-        type: DataTypes.NUMBER,
-      },
+      // likes: {
+      //   type: DataTypes.INT,
+      // },
     },
     {
       sequelize,

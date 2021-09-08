@@ -26,10 +26,10 @@ module.exports = (sequelize, Model, DataTypes) => {
       modelName: "user",
     }
   );
-  User.beforeCreate(async (user, options) => {
-    const hashedPassword = await bcrypt.hash(user.password, 10);
-    user.password = hashedPassword;
-  });
+  // User.beforeCreate(async (user, options) => {
+  //   const hashedPassword = await bcrypt.hash(user.password, 10);
+  //   user.password = hashedPassword;
+  // });
 
   return User;
 };

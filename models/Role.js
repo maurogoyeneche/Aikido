@@ -3,14 +3,8 @@ module.exports = (sequelize, Model, DataTypes) => {
 
   Role.init(
     {
-      Admin: {
-        type: DataTypes.NUMBER,
-      },
-      Editor: {
-        type: DataTypes.NUMBER,
-      },
-      Reader: {
-        type: DataTypes.NUMBER,
+      type: {
+        type: DataTypes.STRING,
       },
     },
     {
