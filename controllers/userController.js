@@ -5,9 +5,11 @@ const show = (req, res) => {
 };
 
 const store = async (req, res) => {
+  console.log(req.body);
   try {
     const user = await User.create(req.body);
-    res.render("home");
+    // res.render("home");
+    res.json(user);
   } catch (error) {
     console.log(error);
     res.redirect("back");
