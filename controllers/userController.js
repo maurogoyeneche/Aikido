@@ -15,9 +15,24 @@ const store = async (req, res) => {
   }
 };
 
-const update = (req, res) => {};
+const update = async (req, res) => {
+  const { username, email, city, address } = req.body;
+  const user = await User.update(
+    {
+      username,
+      email,
+      city,
+      address,
+    },
+    { where: { email: req.body.email } }
+  );
+  res.render("home", { user });
+};
 
-const destroy = (req, res) => {};
+const destroy = async (req, res) => {
+  const user = await User.destroy({ where: { email: req.body.email } });
+  res.render("home");
+};
 
 module.exports = {
   showRegister,

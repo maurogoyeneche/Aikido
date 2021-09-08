@@ -11,6 +11,7 @@ module.exports = (sequelize, Model, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING,
+        unique: true,
         allowNull: false,
       },
       password: {
@@ -25,9 +26,11 @@ module.exports = (sequelize, Model, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       },
+      deletedAt: { type: DataTypes.STRING },
     },
     {
       sequelize,
+      paranoid: true,
       modelName: "user",
     }
   );
