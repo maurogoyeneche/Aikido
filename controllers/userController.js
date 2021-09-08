@@ -1,6 +1,6 @@
 const { User } = require("../models");
 
-const show = (req, res) => {
+const showRegister = (req, res) => {
   res.render("userRegister");
 };
 
@@ -21,7 +21,7 @@ const update = (req, res) => {};
 const destroy = (req, res) => {};
 
 module.exports = {
-  show,
+  showRegister,
   store,
   update,
   destroy,

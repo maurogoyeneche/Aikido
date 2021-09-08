@@ -11,6 +11,7 @@ publicRouter.get("/", pageController.showHome);
 // publicRouter.get("/register", pageController.showRegister);
 
 // publicRouter.post("/login", userController.login);
+publicRouter.get("/register", userController.showRegister);
 publicRouter.post("/register", userController.store);
 
 module.exports = publicRouter;
