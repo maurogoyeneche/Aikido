@@ -3,11 +3,17 @@ module.exports = (sequelize, Model, DataTypes) => {
 
   Article.init(
     {
+      id: {
+        type: DataTypes.NUMBER,
+      },
       title: {
         type: DataTypes.STRING,
       },
       content: {
         type: DataTypes.TEXT,
+      },
+      likes: {
+        type: DataTypes.NUMBER,
       },
     },
     {

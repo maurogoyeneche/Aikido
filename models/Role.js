@@ -1,23 +1,23 @@
 module.exports = (sequelize, Model, DataTypes) => {
-  class Comment extends Model {}
+  class Role extends Model {}
 
-  Comment.init(
+  Role.init(
     {
-      id: {
+      Admin: {
         type: DataTypes.NUMBER,
       },
-      content: {
-        type: DataTypes.TEXT,
+      Editor: {
+        type: DataTypes.NUMBER,
       },
-      likes: {
+      Reader: {
         type: DataTypes.NUMBER,
       },
     },
     {
       sequelize,
-      modelName: "comment",
+      modelName: "role",
     }
   );
 
-  return Comment;
+  return Role;
 };

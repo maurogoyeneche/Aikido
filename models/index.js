@@ -11,13 +11,15 @@ const sequelize = new Sequelize(
   }
 );
 
-const Author = require("./Author")(sequelize, Model, DataTypes);
+const User = require("./User")(sequelize, Model, DataTypes);
 const Comment = require("./Comment")(sequelize, Model, DataTypes);
 const Article = require("./Article")(sequelize, Model, DataTypes);
+const Role = require("./Role")(sequelize, Model, DataTypes);
 
 module.exports = {
   sequelize,
-  Author,
+  User,
   Comment,
   Article,
+  Role,
 };
