@@ -3,9 +3,6 @@ module.exports = (sequelize, Model, DataTypes) => {
 
   Article.init(
     {
-      id: {
-        type: DataTypes.NUMBER,
-      },
       title: {
         type: DataTypes.STRING,
       },

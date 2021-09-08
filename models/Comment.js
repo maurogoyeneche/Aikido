@@ -3,9 +3,6 @@ module.exports = (sequelize, Model, DataTypes) => {
 
   Comment.init(
     {
-      id: {
-        type: DataTypes.NUMBER,
-      },
       content: {
         type: DataTypes.TEXT,
       },
