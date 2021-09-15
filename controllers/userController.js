@@ -1,4 +1,5 @@
 const { User } = require("../models");
+const jwt = require("jsonwebtoken");
 
 const showRegister = (req, res) => {
   res.render("home");
@@ -7,6 +8,7 @@ const showRegister = (req, res) => {
 const store = async (req, res) => {
   try {
     const user = await User.create(req.body);
+    const token = jwt.sign({ id: req.body.id }, process.env.TOKEN_KEY);
     // res.render("home");
     res.json(user);
   } catch (error) {
@@ -30,7 +32,10 @@ const update = async (req, res) => {
 };
 
 const destroy = async (req, res) => {
-  const user = await User.destroy({ where: { email: req.body.email } });
+  const user = await User.destroy({
+    where: { email: req.body.email },
+    force: true,
+  });
   res.render("home");
 };
 
