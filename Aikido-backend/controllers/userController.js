@@ -10,10 +10,10 @@ const store = async (req, res) => {
     const user = await User.create(req.body);
     const token = jwt.sign({ id: req.body.id }, process.env.TOKEN_KEY);
     // res.render("home");
-    res.json(user);
+    res.json({ user, token });
   } catch (error) {
     console.log(error);
-    res.redirect("back");
+    res.status(401).json({ message: "meeh" });
   }
 };
 
