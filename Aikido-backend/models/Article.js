@@ -5,13 +5,22 @@ module.exports = (sequelize, Model, DataTypes) => {
     {
       title: {
         type: DataTypes.STRING,
+        allowNull: false,
+        notEmpty: true,
+        isAlphanumeric: true,
+        max: 70,
       },
       content: {
         type: DataTypes.TEXT,
+        allowNull: false,
+        notEmpty: true,
+        min: 3,
       },
-      // likes: {
-      //   type: DataTypes.INT,
-      // },
+      image: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      deletedAt: { type: DataTypes.STRING },
     },
     {
       sequelize,
