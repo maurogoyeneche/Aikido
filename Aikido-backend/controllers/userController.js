@@ -28,7 +28,7 @@ const update = async (req, res) => {
     },
     { where: { email: req.body.email } }
   );
-  res.render("home", { user });
+  res.json("home", { user });
 };
 
 const destroy = async (req, res) => {

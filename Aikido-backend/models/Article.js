@@ -6,19 +6,23 @@ module.exports = (sequelize, Model, DataTypes) => {
       title: {
         type: DataTypes.STRING,
         allowNull: false,
-        notEmpty: true,
-        isAlphanumeric: true,
-        max: 70,
+        validate: {
+          notEmpty: true,
+          isAlphanumeric: true,
+          max: 70,
+        },
       },
       content: {
         type: DataTypes.TEXT,
         allowNull: false,
-        notEmpty: true,
-        min: 3,
+        validate: {
+          notEmpty: true,
+          min: 3,
+        },
       },
       image: {
         type: DataTypes.STRING,
-        allowNull: true,
+        validate: { allowNull: true },
       },
       deletedAt: { type: DataTypes.STRING },
     },

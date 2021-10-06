@@ -8,23 +8,40 @@ module.exports = (sequelize, Model, DataTypes) => {
       username: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isAlphanumeric: true,
+          min: 3,
+          /* is: /^[a-zA-Z0-9._-\s]/g, */
+        },
       },
       email: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
+        unique: true,
+        validate: {
+          isEmail: true,
+        },
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          min: 8,
+        },
       },
       city: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isAlpha: true,
+        },
       },
       address: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isAlphanumeric: true,
+        },
       },
       deletedAt: { type: DataTypes.STRING },
     },
