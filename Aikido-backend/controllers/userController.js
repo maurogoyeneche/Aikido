@@ -1,5 +1,23 @@
 const { User } = require("../models");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+
+const login = async (req, res) => {
+  const user = await User.findOne({ where: { email: req.body.email } });
+  if (!user) return res.status(401);
+  if (!bcrypt.compareSync(req.body.password, user.password))
+    return res.status(401);
+  const token = jwt.sign({ email: req.body.email }, process.env.TOKEN_KEY);
+  res.json({ token: token });
+};
+
+/* const logout = async (req, res) => {
+  //const { email, token } = req.body;//
+  const user = await User.findOne({ where: { email: req.body.email } });
+  user.token = "";
+  user.save();
+  res.status(200).send("usuario deslogueado");
+}; */
 
 const showRegister = (req, res) => {
   res.render("home");
@@ -44,4 +62,6 @@ module.exports = {
   store,
   update,
   destroy,
+  login,
+  logout,
 };
