@@ -1,0 +1,12 @@
+@media screen and (max-width: 28.125rem) {
+  .newReleases {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 533px) {
+  .buttonView {
+    min-width: 146px;
+  }
+}

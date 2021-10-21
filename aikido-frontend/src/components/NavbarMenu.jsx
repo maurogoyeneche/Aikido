@@ -6,11 +6,9 @@ export default function NavbarMenu() {
   return (
     <>
       <Navbar bg="dark" variant="dark">
-        {/* <Container> */}
         <Navbar.Brand href="#home">
           <Image src="/img/iwamashinshinlogo-2.png" className="logo" />
         </Navbar.Brand>
-
         <Nav className="ms-auto">
           <Nav.Link href="#home">News</Nav.Link>
           <Nav.Link href="#features">Dojos</Nav.Link>
@@ -21,8 +19,6 @@ export default function NavbarMenu() {
             {/* <Nav.Link href="#pricing">Logout</Nav.Link> */}
           </div>
         </Nav>
-
-        {/* </Container> */}
       </Navbar>
     </>
   );
