@@ -1,7 +1,7 @@
 import React from "react";
 import "../components/styles/styleNewsGrid.css";
 
-function NewsGrid({ posts }) {
+function NewsGrid({ Post, posts }) {
   return (
     <>
       <div className="container">
@@ -9,7 +9,7 @@ function NewsGrid({ posts }) {
           {posts && (
             <>
               {posts.map((post) => (
-                <Card post={post} key={post.id} />
+                <Post post={post} key={post.id} />
               ))}
             </>
           )}
