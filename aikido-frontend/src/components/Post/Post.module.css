@@ -1,0 +1,9 @@
+.newsTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.newsCardBody p {
+  color: grey;
+}
