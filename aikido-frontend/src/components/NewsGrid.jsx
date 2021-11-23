@@ -13,6 +13,7 @@ function NewsGrid({ post, posts }) {
           </>
         )}
         <Post />
+        <hr />
       </div>
     </>
   );
