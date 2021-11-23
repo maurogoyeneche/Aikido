@@ -10,7 +10,7 @@ export default function NavbarMenu() {
     <>
       <Navbar bg="dark" variant="dark" expand="lg" className="sticky-top">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand>
             <Link to="#home" className="navbar-brand">
               <Image src="/img/iwamashinshinlogo-2.png" className="logo" />
             </Link>{" "}
@@ -18,10 +18,18 @@ export default function NavbarMenu() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home">News</Nav.Link>
-              <Nav.Link href="#link">Dojo</Nav.Link>
-              <Nav.Link href="#link">Galeria</Nav.Link>
-              <Nav.Link href="#link">Contacto</Nav.Link>
+              <Link className="nav-link" to="#news">
+                News
+              </Link>
+              <Link className="nav-link" to="#dojo">
+                Dojo
+              </Link>
+              <Link className="nav-link" to="#galeria">
+                Galeria
+              </Link>
+              <Link className="nav-link" to="#contact">
+                Contacto
+              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
