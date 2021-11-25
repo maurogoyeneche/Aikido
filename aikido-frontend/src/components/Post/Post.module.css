@@ -26,7 +26,7 @@
 .news {
   display: flex;
   /* box-shadow: 4px 5px 10px grey; */
-  border-top: 2px solid white;
+  /* border-top: 2px solid white; */
 }
 @media (max-width: 376px) {
   .news {
