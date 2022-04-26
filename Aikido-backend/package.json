@@ -1,13 +1,13 @@
 {
-  "name": "hackacademy_ejemplo_mvc_sequelize",
-  "version": "1.0.0",
+  "name": "aiki-be",
+  "version": "0.0.1",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "keywords": [],
-  "author": "Hack Academy",
+  "author": "magodev",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -24,5 +24,5 @@
     "sqlite3": "^5.0.2"
   },
   "devDependencies": {},
-  "description": "Hack Academy - Ejemplo de MVC y Sequelize"
+  "description": "Aiki web app"
 }
