@@ -1,7 +1,7 @@
 const express = require("express");
 const adminRouter = express.Router();
 const articleController = require("../controllers/articleController");
-const checkJwt = require("express-jwt");
+const checkJwt = require("express-jwt/lib");
 
 // Rutas del Admin:
 // ...

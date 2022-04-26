@@ -1,4 +1,4 @@
-const { Sequelize, Model, DataTypes } = require("sequelize");
+const { Sequelize, Model, DataTypes } = require("sequelize/types");
 
 const sequelize = new Sequelize(
   process.env.DB_DATABASE, // Ej: hack_academy_db
