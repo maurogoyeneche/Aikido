@@ -20,7 +20,7 @@ const login = async (req, res) => {
 }; */
 
 const showRegister = (req, res) => {
-  res.render("home");
+  res.send("Register page");
 };
 
 const store = async (req, res) => {
