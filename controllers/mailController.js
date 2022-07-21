@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const sendMail = async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message, phone } = req.body;
   // let testAccount = await nodemailer.createTestAccount();
 
   const transporter = nodemailer.createTransport({
@@ -19,7 +19,9 @@ const sendMail = async (req, res) => {
     from: email,
     to: "maurogoyeneche@gmail.com",
     subject: `Contacto desde web Aikido de ${name}`,
-    text: `Nombre: ${name} \nEmail: ${email} \nMensaje: ${message}`,
+    text: `Nombre: ${name} \nE-mail: ${email} \nTelefono: ${
+      phone || " No agregó número"
+    } \nMensaje: ${message}`,
   };
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
