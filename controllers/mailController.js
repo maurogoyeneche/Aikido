@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 const sendMail = async (req, res) => {
-  const { name, email, message, phone } = req.body;
+  const { name, email, message, phone, surname } = req.body;
   // let testAccount = await nodemailer.createTestAccount();
 
   const transporter = nodemailer.createTransport({
@@ -15,9 +15,10 @@ const sendMail = async (req, res) => {
       pass: process.env.EMAIL_PASS,
     },
   });
+
   const mailOptions = {
     from: email,
-    to: "maurogoyeneche@gmail.com",
+    to: surname === "" ? "maurogoyeneche@gmail.com" : "",
     subject: `Contacto desde web Aikido de ${name}`,
     text: `Nombre: ${name} \nE-mail: ${email} \nTelefono: ${
       phone || " No agregó número"
@@ -32,7 +33,6 @@ const sendMail = async (req, res) => {
       res.status(200).json({ message: "Mensaje enviado" });
     }
     console.log(data);
-    console.log(info);
   });
 };
 
