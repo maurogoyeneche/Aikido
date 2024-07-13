@@ -15,17 +15,16 @@
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
-    "express-jwt": "^6.1.0",
+    "express-jwt": "^8.4.1",
     "express-session": "^1.17.2",
     "faker": "^5.5.3",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.2",
     "moment": "^2.29.4",
-    "mysql2": "^2.2.5",
+    "mysql2": "^3.10.2",
     "nodemailer": "^6.7.7",
-    "nodemon": "^2.0.19",
+    "nodemon": "^3.1.4",
     "sequelize": "^6.6.5",
     "sqlite3": "^5.0.2"
   },
-  "description": "Aiki web app",
-  "devDependencies": { }
+  "description": "Aiki web app"
 }
