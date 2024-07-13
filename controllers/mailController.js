@@ -47,7 +47,6 @@ const sendMail = async (req, res) => {
     } else {
       res.status(200).json({ message: "Mensaje enviado" });
     }
-    console.log(data);
   });
 };
 
